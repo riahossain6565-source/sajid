@@ -1,0 +1,7 @@
+{
+  "name": "KeshAura - Premium Organic Hair Pack",
+  "description": "Handcrafted organic Ayurvedic hair care packs, nourishing treatments, and seamless WhatsApp ordering with admin management portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

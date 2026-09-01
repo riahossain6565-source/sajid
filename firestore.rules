@@ -1,0 +1,37 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Products collection: public read, allow updates/additions for admin catalog management
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Orders collection: public create for orders & whatsapp checkout, readable & manageable
+    match /orders/{orderId} {
+      allow read: if true;
+      allow create: if true;
+      allow update, delete: if true;
+    }
+
+    // Reviews collection: public read & customer review submission
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if true;
+      allow update, delete: if true;
+    }
+
+    // Store settings & configuration
+    match /settings/{settingId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // User profiles collection
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}

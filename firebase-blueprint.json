@@ -1,0 +1,90 @@
+{
+  "entities": {
+    "Product": {
+      "collection": "products",
+      "fields": {
+        "id": { "type": "string", "description": "Unique product ID" },
+        "name": { "type": "string", "description": "Product name" },
+        "subtitle": { "type": "string", "description": "Formula subtitle" },
+        "tagline": { "type": "string", "description": "Short summary" },
+        "price": { "type": "number", "description": "Base price in INR" },
+        "originalPrice": { "type": "number", "description": "Strikethrough original price" },
+        "rating": { "type": "number", "description": "Average rating" },
+        "reviewCount": { "type": "number", "description": "Number of customer reviews" },
+        "image": { "type": "string", "description": "Main product image URL" },
+        "gallery": { "type": "array", "description": "Product image gallery URLs" },
+        "category": { "type": "string", "description": "Product category" },
+        "badge": { "type": "string", "description": "Badge label" },
+        "isBestSeller": { "type": "boolean", "description": "Whether it's a bestseller" },
+        "stock": { "type": "number", "description": "Available stock quantity" },
+        "sizes": { "type": "array", "description": "Available sizes and price multipliers" },
+        "description": { "type": "string", "description": "Detailed description" },
+        "benefits": { "type": "array", "description": "Key herbal benefits" },
+        "ingredients": { "type": "array", "description": "Active botanical ingredients" },
+        "usageSteps": { "type": "array", "description": "Step by step application ritual" },
+        "dosha": { "type": "array", "description": "Target Ayurvedic doshas" },
+        "hairConcerns": { "type": "array", "description": "Hair issues addressed" },
+        "scentProfile": { "type": "string", "description": "Aromatic scent notes" }
+      }
+    },
+    "Order": {
+      "collection": "orders",
+      "fields": {
+        "id": { "type": "string", "description": "Order ID (e.g. KA-1234)" },
+        "date": { "type": "string", "description": "Order placement timestamp" },
+        "customerName": { "type": "string", "description": "Customer full name" },
+        "phone": { "type": "string", "description": "Customer WhatsApp contact number" },
+        "email": { "type": "string", "description": "Customer email" },
+        "address": { "type": "string", "description": "Shipping address" },
+        "city": { "type": "string", "description": "City" },
+        "postalCode": { "type": "string", "description": "Postal pin code" },
+        "hairConcerns": { "type": "string", "description": "Customer hair notes" },
+        "items": { "type": "array", "description": "List of ordered items" },
+        "subtotal": { "type": "number", "description": "Cart subtotal" },
+        "shipping": { "type": "number", "description": "Shipping charges" },
+        "discount": { "type": "number", "description": "Promotional discount" },
+        "total": { "type": "number", "description": "Final total amount" },
+        "paymentMethod": { "type": "string", "description": "Payment method chosen" },
+        "status": { "type": "string", "description": "Order fulfillment status" },
+        "notes": { "type": "string", "description": "Special order notes" }
+      }
+    },
+    "Review": {
+      "collection": "reviews",
+      "fields": {
+        "id": { "type": "string", "description": "Review unique ID" },
+        "productId": { "type": "string", "description": "Associated product ID" },
+        "author": { "type": "string", "description": "Reviewer name" },
+        "location": { "type": "string", "description": "Reviewer city / state" },
+        "rating": { "type": "number", "description": "1-5 star rating" },
+        "date": { "type": "string", "description": "Review date" },
+        "title": { "type": "string", "description": "Review headline" },
+        "comment": { "type": "string", "description": "Detailed testimonial" },
+        "verified": { "type": "boolean", "description": "Verified purchaser badge" },
+        "avatarUrl": { "type": "string", "description": "Reviewer avatar" },
+        "doshaType": { "type": "string", "description": "Reviewer Ayurvedic dosha" }
+      }
+    },
+    "StoreSettings": {
+      "collection": "settings",
+      "fields": {
+        "whatsappNumber": { "type": "string", "description": "Admin WhatsApp dispatch number" },
+        "storeName": { "type": "string", "description": "Brand store name" },
+        "supportEmail": { "type": "string", "description": "Support contact email" }
+      }
+    },
+    "UserProfile": {
+      "collection": "users",
+      "fields": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "email": { "type": "string", "description": "User email address" },
+        "displayName": { "type": "string", "description": "User full name" },
+        "phoneNumber": { "type": "string", "description": "Contact / WhatsApp number" },
+        "address": { "type": "string", "description": "Default delivery address" },
+        "city": { "type": "string", "description": "City / State" },
+        "postalCode": { "type": "string", "description": "Postal PIN code" },
+        "dosha": { "type": "string", "description": "Ayurvedic dosha profile" }
+      }
+    }
+  }
+}
